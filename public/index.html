@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Event Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">CAMPUS ORGANIZATION</p>
+      <h1>Event Registration</h1>
+      <p class="subtitle">Register for campus activities and keep track of student sign-ups.</p>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">JOIN AN ACTIVITY</p>
+          <h2>Student Registration</h2>
+        </div>
+      </div>
+
+      <form id="registration-form">
+        <label for="name">Student name</label>
+        <input id="name" name="name" type="text" maxlength="80"
+               placeholder="Enter your full name" required>
+
+        <label for="section">Section</label>
+        <input id="section" name="section" type="text" maxlength="20"
+               placeholder="Example: BSIT 2A" required>
+
+        <label for="event">Event</label>
+        <select id="event" name="event" required>
+          <option value="">Select an event</option>
+          <option value="IT Week">IT Week</option>
+          <option value="Cybersecurity Seminar">Cybersecurity Seminar</option>
+          <option value="Programming Workshop">Programming Workshop</option>
+          <option value="Other Campus Activity">Other Campus Activity</option>
+        </select>
+
+        <button id="submit-button" type="submit">Add Registration</button>
+      </form>
+      <p id="form-message" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <div class="list-heading">
+        <div>
+          <p class="eyebrow">REGISTRATION RECORDS</p>
+          <h2>Registered Students</h2>
+        </div>
+        <button id="refresh-button" class="secondary-button" type="button">Refresh</button>
+      </div>
+
+      <p id="list-message" class="message" role="status" aria-live="polite">Loading registrations...</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Student name</th>
+              <th>Section</th>
+              <th>Event</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="registration-list"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>Campus Event Registration System · IPT1 Portfolio Project</p>
+  </footer>
+</body>
+</html>
