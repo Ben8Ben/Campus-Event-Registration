@@ -42,8 +42,6 @@ git init
 git add .
 git commit -m "Create campus event registration system"
 git branch -M main
-git remote add origin YOUR_GITHUB_REPOSITORY_URL
+git remote set-url origin https://github.com/Ben8Ben/Campus-Event-Registration.git
 git push -u origin main
 ```
-
-Replace `YOUR_GITHUB_REPOSITORY_URL` with your own repository URL.
